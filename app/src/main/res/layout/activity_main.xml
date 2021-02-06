@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <com.owen.tab.TvTabLayout
+        android:id="@+id/tablayout3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:tabIndicatorResId="@color/black"
+        app:tabIndicatorWidth="108dp"
+        app:tabIndicatorHeight="15dp"
+        app:tabIndicatorBackgroundColor="@color/green"
+        app:tabIndicatorBackgroundHeight="3dp"
+        app:tabMinWidth="160dp"
+        app:tabScrollMode="fixed"
+        app:tabGravity="center"
+        app:tabPaddingBottom="12dp"
+        app:tabTextSelectedScale="1.2"
+        app:tabTexSize="22sp"
+        app:tabTextColor="@color/black">
+
+        <com.owen.tab.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="热门" />
+
+        <com.owen.tab.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="电视" />
+
+        <com.owen.tab.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="电影" />
+
+        <com.owen.tab.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="热门" />
+
+        <com.owen.tab.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="电视" />
+
+        <com.owen.tab.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="电影" />
+    </com.owen.tab.TvTabLayout>
+
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:rowCount="1"
+        android:columnCount="2">　　
+
+        <ImageView
+            android:id="@+id/a"
+            android:layout_width="0dp"
+            android:padding="10dp"
+            android:layout_height="match_parent"
+            android:src='@drawable/a'
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill" />
+
+        <ImageView
+            android:id="@+id/b"
+            android:layout_width="0dp"
+            android:padding="10dp"
+            android:layout_height="match_parent"
+            android:src='@drawable/a'
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill" />
+    </GridLayout>
+
+    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:padding="10dp"
+        android:orientation="horizontal"
+        android:rowCount="1"
+        android:columnCount="4">　　
+
+        <ImageView
+            android:id="@+id/aa"
+            android:src='@drawable/c'
+            android:layout_width="0dp"
+            android:padding="10dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill" />
+
+        <ImageView
+            android:id="@+id/bb"
+            android:src='@drawable/d'
+            android:layout_width="0dp"
+            android:padding="10dp"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1" />
+
+        <ImageView
+            android:id="@+id/cc"
+            android:src='@drawable/d'
+            android:layout_width="0dp"
+            android:padding="10dp"
+            android:layout_columnWeight="1"
+            android:layout_gravity="fill" />
+
+        <ImageView
+            android:id="@+id/dd"
+            android:src='@drawable/e'
+            android:layout_width="0dp"
+            android:padding="10dp"
+            android:layout_gravity="fill"
+            android:layout_columnWeight="1" />
+    </GridLayout>
+
+</LinearLayout>
