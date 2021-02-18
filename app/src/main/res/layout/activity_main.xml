@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,6 +8,12 @@
     tools:context=".MainActivity">
 
     <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/top"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:orientation="horizontal">
@@ -46,60 +52,58 @@
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="right"
-                android:src="@mipmap/ic_launcher_round"/>
+                android:background="@mipmap/ic_launcher_round"/>
         </LinearLayout>
-
-
     </LinearLayout>
 
-    <com.owen.tab.TvTabLayout
-        android:id="@+id/tablayout3"
+        <com.owen.tab.TvTabLayout
+            android:id="@+id/tablayout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            app:tabIndicatorResId="@color/black"
+            app:tabIndicatorWidth="108dp"
+            app:tabIndicatorHeight="15dp"
+            app:tabIndicatorBackgroundColor="@color/green"
+            app:tabIndicatorBackgroundHeight="3dp"
+            app:tabMinWidth="160dp"
+            app:tabScrollMode="fixed"
+            app:tabGravity="center"
+            app:tabPaddingBottom="12dp"
+            app:tabTextSelectedScale="1.2"
+            app:tabTexSize="22sp"
+            app:tabTextColor="@color/black">
+
+            <com.owen.tab.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="全部" />
+
+            <com.owen.tab.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="推荐" />
+
+            <com.owen.tab.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="英雄联盟" />
+
+            <com.owen.tab.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="王者荣耀" />
+
+            <com.owen.tab.TabItem
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="和平精英" />
+
+        </com.owen.tab.TvTabLayout>
+
+    <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        app:tabIndicatorResId="@color/black"
-        app:tabIndicatorWidth="108dp"
-        app:tabIndicatorHeight="15dp"
-        app:tabIndicatorBackgroundColor="@color/green"
-        app:tabIndicatorBackgroundHeight="3dp"
-        app:tabMinWidth="160dp"
-        app:tabScrollMode="fixed"
-        app:tabGravity="center"
-        app:tabPaddingBottom="12dp"
-        app:tabTextSelectedScale="1.2"
-        app:tabTexSize="22sp"
-        app:tabTextColor="@color/black">
-
-        <com.owen.tab.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="全部" />
-
-        <com.owen.tab.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="推荐" />
-
-        <com.owen.tab.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="英雄联盟" />
-
-        <com.owen.tab.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="王者荣耀" />
-
-        <com.owen.tab.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="和平精英" />
-
-    </com.owen.tab.TvTabLayout>
-
-    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:layout_width="match_parent"
-        android:layout_height="130dp"
+        android:layout_height="210dp"
         android:orientation="horizontal"
         android:padding="10dp"
         android:rowCount="2"
@@ -110,7 +114,7 @@
             android:layout_width="0dp"
             android:padding="10dp"
             android:layout_height="match_parent"
-            android:src='@drawable/a2'
+            android:background='@drawable/a2'
             android:layout_columnWeight="1"
             android:layout_gravity="fill" />
 
@@ -119,23 +123,22 @@
             android:layout_width="0dp"
             android:padding="10dp"
             android:layout_height="match_parent"
-            android:src='@drawable/a2'
+            android:background='@drawable/a2'
             android:layout_columnWeight="1"
             android:layout_gravity="fill" />
     </GridLayout>
 
-    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <GridLayout
         android:layout_width="match_parent"
-        android:layout_height="180dp"
+        android:layout_height="100dp"
         android:padding="10dp"
-        android:columnCount="5"
+        android:columnCount="10"
         android:orientation="horizontal">　　
 
         <ImageView
             android:id="@+id/aa"
-            android:src='@drawable/b2'
+            android:background='@drawable/b2'
             android:layout_width="0dp"
-            android:layout_height="0dp"
             android:padding="10dp"
             android:layout_gravity="fill"
             android:layout_columnWeight="1"
@@ -143,7 +146,7 @@
 
         <ImageView
             android:id="@+id/bb"
-            android:src='@drawable/b2'
+            android:background='@drawable/c2'
             android:layout_width="0dp"
             android:padding="10dp"
             android:layout_gravity="fill"
@@ -151,7 +154,7 @@
 
         <ImageView
             android:id="@+id/cc"
-            android:src='@drawable/b2'
+            android:background='@drawable/d2'
             android:layout_width="0dp"
             android:padding="10dp"
             android:layout_columnWeight="1"
@@ -159,32 +162,31 @@
 
         <ImageView
             android:id="@+id/dd"
-            android:src='@drawable/b2'
+            android:background='@drawable/e2'
             android:layout_width="0dp"
             android:padding="10dp"
             android:layout_gravity="fill"
             android:layout_columnWeight="1" />
 
         <ImageView
-            android:id="@+id/ee"
-            android:src='@drawable/b2'
+            android:id="@+id/f2"
+            android:background='@drawable/f2'
             android:layout_width="0dp"
             android:padding="10dp"
             android:layout_gravity="fill"
             android:layout_columnWeight="1" />
 
         <ImageView
-            android:id="@+id/ff"
-            android:src='@drawable/b2'
+            android:id="@+id/g2"
+            android:background='@drawable/f2'
             android:layout_width="0dp"
-            android:layout_height="0dp"
             android:padding="10dp"
             android:layout_gravity="fill"
             android:layout_columnWeight="1" />
 
         <ImageView
-            android:id="@+id/gg"
-            android:src='@drawable/b2'
+            android:id="@+id/h2"
+            android:background='@drawable/d2'
             android:layout_width="0dp"
             android:padding="10dp"
             android:layout_gravity="fill"
@@ -192,7 +194,7 @@
 
         <ImageView
             android:id="@+id/hh"
-            android:src='@drawable/b2'
+            android:background='@drawable/c2'
             android:layout_width="0dp"
             android:padding="10dp"
             android:layout_columnWeight="1"
@@ -200,7 +202,7 @@
 
         <ImageView
             android:id="@+id/ii"
-            android:src='@drawable/b2'
+            android:background='@drawable/b2'
             android:layout_width="0dp"
             android:padding="10dp"
             android:layout_gravity="fill"
@@ -208,23 +210,23 @@
 
         <ImageView
             android:id="@+id/jj"
-            android:src='@drawable/b2'
+            android:background='@drawable/c2'
             android:layout_width="0dp"
             android:padding="10dp"
             android:layout_gravity="fill"
             android:layout_columnWeight="1" />
     </GridLayout>
 
-    <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <GridLayout
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:padding="10dp"
-        android:columnCount="5"
+        android:columnCount="4"
         android:orientation="horizontal">　　
 
         <ImageView
             android:id="@+id/aaa"
-            android:src='@drawable/c2'
+            android:background='@drawable/h2'
             android:layout_width="0dp"
             android:padding="10dp"
             android:layout_gravity="fill"
@@ -232,7 +234,7 @@
 
         <ImageView
             android:id="@+id/bbb"
-            android:src='@drawable/c2'
+            android:background='@drawable/g2'
             android:layout_width="0dp"
             android:padding="10dp"
             android:layout_gravity="fill"
@@ -240,7 +242,7 @@
 
         <ImageView
             android:id="@+id/ccc"
-            android:src='@drawable/c2'
+            android:background='@drawable/g2'
             android:layout_width="0dp"
             android:padding="10dp"
             android:layout_gravity="fill"
@@ -248,12 +250,11 @@
 
         <ImageView
             android:id="@+id/ddd"
-            android:src='@drawable/c2'
+            android:background='@drawable/h2'
             android:layout_width="0dp"
             android:padding="10dp"
             android:layout_gravity="fill"
             android:layout_columnWeight="1" />
-
     </GridLayout>
-
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>
