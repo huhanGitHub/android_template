@@ -106,8 +106,9 @@
         android:layout_height="210dp"
         android:orientation="horizontal"
         android:padding="10dp"
+        android:columnCount="10"
         android:rowCount="2"
-        android:columnCount="2">　　
+        >　　
 
         <ImageView
             android:id="@+id/a"
@@ -133,6 +134,7 @@
         android:layout_height="100dp"
         android:padding="10dp"
         android:columnCount="10"
+        android:rowCount="2"
         android:orientation="horizontal">　　
 
         <ImageView
@@ -221,7 +223,8 @@
         android:layout_width="match_parent"
         android:layout_height="150dp"
         android:padding="10dp"
-        android:columnCount="4"
+        android:columnCount="10"
+        android:rowCount="2"
         android:orientation="horizontal">　　
 
         <ImageView
